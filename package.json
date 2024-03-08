@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "eslint --ignore-path .gitignore --ignore-pattern _includes/readmes/ \"**/*.md\""
+    "test": "eslint --ignore-path .gitignore --ignore-pattern _includes/readmes/ \"**/*.md\"",
+    "prepare": "husky"
   },
   "devDependencies": {
     "eslint": "^8.54.0",
@@ -11,7 +12,11 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "lint-staged": "^15.2.2"
+  },
+  "lint-staged": {
+    "**/*.md": "eslint --ignore-path .gitignore --ignore-pattern _includes/readmes/"
   },
   "eslintConfig": {
     "extends": [
